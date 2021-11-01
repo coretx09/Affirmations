@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- ConstraintLayout est idéal et flexible lorsque vous souhaitez positionner plusieurs vues enfants
+  dans une mise en page.
+  Étant donné que votre mise en page n'a qu'une seule vue enfant, RecyclerView
+  vous pouvez passer à un ViewGroup appel plus simple FrameLayout qui devrait être utilisé
+  pour contenir une seule vue enfant. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- ==> item - Un élément de données de la liste à afficher. Représente un Affirmation objet dans votre application.
+    ==> RecyclerView prend en charge l'affichage des éléments de différentes manières,
+     comme une liste linéaire ou une grille(LayoutManager)
+    ==> scrollbars attribut défini sur vertical, Pour pouvoir faire défiler une liste verticale
+     d'éléments plus longue que l'écran
+    ==> layout_width et layout_height attributs du RecyclerView à match_parent afin que le RecyclerView
+    peut remplir tout l'écran.   -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

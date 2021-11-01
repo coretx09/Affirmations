@@ -31,5 +31,23 @@ Créer une class pour être une source de données:
  Les données affichées dans votre application peuvent provenir de différentes sources (par exemple, au sein de votre
  projet d'application ou d'une source externe qui nécessite une connexion à Internet pour télécharger les données).
  Par conséquent, les données peuvent ne pas être au format exact dont vous avez besoin.
- Le reste de l'application ne doit passe préoccuper de l'origine des données ou de leur format d'origine.
+ Le reste de l'application ne doit pas se préoccuper de l'origine des données ou de leur format d'origine.
  Vous pouvez et devez cacher cette préparation des données dans une Datasource class distincte qui prépare les données pour l'application.
+
+
+
+RECYCLERVIEW :
+ item - Un élément de données de la liste à afficher. Représente un Affirmation objet dans votre application.
+ Adaptateur - Prend les données et les prépare RecyclerView à s'afficher.
+ ViewHolders - Un pool de vues RecyclerView à utiliser et à réutiliser pour afficher des affirmations.
+ RecyclerView - Vues à l'écran
+
+ Implémenter un adaptateur pour RecyclerView :
+ Votre application a besoin d'un moyen de récupérer les données de Datasource, et de les formater
+ afin que chacune Affirmation puisse être affichée en tant qu'élément dans le fichier RecyclerView.
+ L'adaptateur est un modèle de conception qui adapte les données en quelque chose qui peut être utilisé par RecyclerView.
+
+ Créer un ViewHolder :
+ RecyclerView n'interagit pas directement avec les vues d'éléments, mais traite à la ViewHolders
+ ViewHolder représente une vue d'élément de liste unique dans RecyclerView, et peut être réutilisé lorsque cela est possible.
+ Une ViewHolder instance contient des références aux vues individuelles dans une disposition d'élément de liste
