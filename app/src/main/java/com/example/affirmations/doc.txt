@@ -1,0 +1,35 @@
+// jeton :  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
+
+Ce que vous apprendrez
+ Comment utiliser  RecyclerView pour afficher une liste de données.
+ Comment organiser votre code en packages
+ Comment utiliser des adaptateurs avec RecyclerViewpour personnaliser l'apparence d'un élément de liste individuel.
+
+Qu'est-ce qu'un paquet ?
+ Organisation logique de votre code vous aide, ainsi que les autres développeurs, à le comprendre, le maintenir et l'étendre.
+ Vous pouvez organiser votre code en fichiers et packages.
+
+Utilisation des packages :
+ Vous pouvez utiliser les packages de deux manières:
+ Créez différents packages pour différentes parties de votre code. Par exemple, les développeurs séparent souvent
+ les classes qui fonctionnent avec les données et les classes qui construisent l'interface utilisateur dans différents packages.
+
+ Utilisez le code d'autres packages dans votre code. Afin d'utiliser les classes d'autres packages, vous devez les
+ définir dans les dépendances de votre système de construction.  C'est également une pratique standard pour import
+
+ Même lorsque vous n'avez pas beaucoup de classes pour votre application,
+ il est recommandé d'utiliser des packages pour regrouper les classes par fonctionnalité.
+
+Nommer les packages:
+ Un nom de package peut être n'importe quoi, tant qu'il est globalement unique ; aucun autre package publié nulle part ne peut avoir le même nom.
+ Bien que les noms de packages ne créent pas de hiérarchie de packages, la réutilisation de parties
+ du nom est utilisée pour indiquer une relation et une organisation du contenu !
+
+ Les développeurs utilisent souvent model comme nom de package pour les classes qui modélisent (ou représentent) les données.
+
+Créer une class pour être une source de données:
+ Les données affichées dans votre application peuvent provenir de différentes sources (par exemple, au sein de votre
+ projet d'application ou d'une source externe qui nécessite une connexion à Internet pour télécharger les données).
+ Par conséquent, les données peuvent ne pas être au format exact dont vous avez besoin.
+ Le reste de l'application ne doit passe préoccuper de l'origine des données ou de leur format d'origine.
+ Vous pouvez et devez cacher cette préparation des données dans une Datasource class distincte qui prépare les données pour l'application.
