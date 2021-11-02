@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Mise en page pour les éléments du RecyclerView
+<!-- Mise en page pour les éléments du RecyclerView:
+Chaque élément du RecyclerView a sa propre mise en page, que vous définissez dans un fichier de mise en page distinct.
+
  Notez que vous n'avez pas besoin d'un ViewGroup autour de votre mise en page, car cette mise en page
- d'élément de liste sera plus tard gonflée et ajoutée en tant qu'enfant au parent RecyclerView.-->
+ d'élément de liste sera plus tard gonflée et ajoutée en tant qu'enfant au parent RecyclerView.
+
+  Étant donné que vous n'allez afficher qu'une chaîne, vous pouvez utiliser un TextView pour la mise en page de votre élément.
+  utiliser File > New > Layout Resource File  et TextView comme élément Root-->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/item_title"
     android:layout_width="wrap_content"
