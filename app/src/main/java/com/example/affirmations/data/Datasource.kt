@@ -3,10 +3,13 @@ package com.example.affirmations.data
 import com.example.affirmations.R
 import com.example.affirmations.model.Affirmation
 
-/* Data Source
-  Prépare les données pour l'application qui seront ensuite modelise (dans Model) */
+/** [Datasource]class
+  Prépare les données pour l'application qui seront ensuite modelise dans Model
+ Contient une methode [loadAffirmations]
+ */
 class Datasource {
-    // loadAffirmations() doit renvoyer une liste de Affirmations
+    /** [loadAffirmations] renvoie une liste de type [Affirmation]class  c-a-d une liste d'instances
+     * de [Affirmation]*/
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
             Affirmation(R.string.affirmation1),

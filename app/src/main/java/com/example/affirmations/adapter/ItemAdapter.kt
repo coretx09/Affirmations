@@ -19,9 +19,10 @@ import com.example.affirmations.model.Affirmation
   Ces informations, ainsi que d'autres informations sur l'application, sont stockées dans une Context*/
 
 /**Adapter for the [RecyclerView] in [MainActivity] displays [Affirmation] data object
- * ItemAdapter implemente  RecyclerView.Adapter(class abstract) **/
+ * [ItemAdapter] implemente  [RecyclerView.Adapter] (class abstract) **/
 class ItemAdapter(private val context: Context,
                   private val dataset: List<Affirmation>
+
                   // RecyclerView.Adapter(class abstract)<VH> – Une classe qui étend ViewHolder qui sera utilisé par l'adaptateur.
                   // responsable de fournir des views qui représentent des items dans data set
                   ):RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
@@ -34,9 +35,11 @@ class ItemAdapter(private val context: Context,
      * ItemViewHolder implemente RecyclerViewHolder **/
     /* ItemViewHolder une sous-classe de RecyclerView.ViewHolder et transmettez le view paramètre au constructeur de la superclass.    */
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+
         // textView de type TextView , view attribuez ID item_title (défini dans list_item.xml)
         val textView: TextView = view.findViewById(R.id.item_title)
     }
+
 
     /* Placez votre curseur ItemAdapter et appuyez sur Ctrl+I, Cela vous montre la liste des méthodes
      que vous devez implémenter : getItemCount(), onCreateViewHolder(), et onBindViewHolder().*/

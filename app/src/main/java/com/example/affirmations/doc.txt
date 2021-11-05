@@ -52,3 +52,13 @@ RECYCLERVIEW :
  RecyclerView n'interagit pas directement avec les vues d'éléments, mais traite à la ViewHolders
  ViewHolder représente une vue d'élément de liste unique dans RecyclerView, et peut être réutilisé lorsque cela est possible.
  Une ViewHolder instance contient des références aux vues individuelles dans une disposition d'élément de liste
+
+
+[RESUME]
+ [RecyclerView] widget vous aide à afficher une liste de données.
+                utilise le modèle d'adaptateur pour adapter et afficher les données.
+
+ Pour implémenter [Adapter] :
+  Créez une nouvelle classe pour [Adapter], par exemple, ItemAdapter
+  Créez une [ViewHolder] classe personnalisée qui représente une vue d'élément de liste unique. Étendre de la [RecyclerView.ViewHolder] classe
+
