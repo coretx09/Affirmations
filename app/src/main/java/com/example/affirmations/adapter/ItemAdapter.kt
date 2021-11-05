@@ -7,6 +7,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.affirmations.R
@@ -38,6 +39,8 @@ class ItemAdapter(private val context: Context,
 
         // textView de type TextView , view attribuez ID item_title (défini dans list_item.xml)
         val textView: TextView = view.findViewById(R.id.item_title)
+        // imageView 
+        val imageView: ImageView = view.findViewById(R.id.item_image)
     }
 
 
@@ -61,6 +64,7 @@ class ItemAdapter(private val context: Context,
         Dans ce cas, il n'y a qu'une seule view : le TextView inside ItemViewHolder.
         Définissez le texte de TextView pour afficher la Affirmation chaîne de cet élément. */
         holder.textView.text = context.resources.getString(item.stringResourceId)
+        holder.imageView.setImageResource(item.imageResourceId)
     }
 
     /** getItemCount() méthode doit renvoyer la taille de dataset **/

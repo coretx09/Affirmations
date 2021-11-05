@@ -1,0 +1,5 @@
+Utiliser des annotations de ressources:
+ Les annotations sont utiles car elles ajoutent des informations supplémentaires aux classes, méthodes ou paramètres.
+ Les annotations sont toujours déclarées avec un symbole @ .
+
+Ajouter un ImageView à la disposition des éléments de liste
